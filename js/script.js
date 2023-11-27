@@ -1,6 +1,7 @@
 
 const parola = document.getElementById("parolaInput");
 const aggiungiParolaButton = document.getElementById("aggiungiParola");
+const result = document.getElementById("result");
 
 
 function isPalindrome (parola) {
@@ -16,13 +17,14 @@ function isPalindrome (parola) {
 
 
 
-
 aggiungiParolaButton.addEventListener("click",
 
  function() { if (isPalindrome(parola.value) === true ) {
     console.log(parola.value + " è una parola palindroma!");
+    result.innerHTML = parola.value + " è una parola palindroma!"
 } else {
     console.log(parola.value + " non è una parola palindroma.");
+    result.innerHTML = parola.value + " non è una parola palindroma."
 }
 
 
